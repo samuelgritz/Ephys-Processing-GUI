@@ -1,0 +1,163 @@
+
+sweep_properties: 
+    - sweep 
+    - stim_type
+    - original_trace
+    - processed_traces
+    - stims
+    - stim_value
+    - acquisition_frequency
+    - dt
+    - time
+    - directory_name
+cell_meta_data_fields:
+    - Animal_id
+    - Animal_age
+    - Animal_genotype
+cell_properties:
+    - Cell_type 
+    - Cell_id 
+    - Cell_region 
+    - Cell_layer 
+    - Cell_depth
+ 
+analysis_types:
+  AP:
+    - AP_threshold
+    - AP_threshold_indices
+    - AP_peak_indices
+    - AP_firing_rate
+    - AP_number
+    - AP_ISI_time
+    - AP_halfwidth
+    - AP_size
+    - AHP_size
+    - AHP_halfwidth
+    - AHP_indices
+  Intrinsic_cell:
+    - Vm_rest
+    - steady_state_input_resistance
+    - peak_input_resistance
+    - Voltage_sag
+  Recording_quality:
+    - Series_resistance
+  fine_f_I_stim:
+    - current_amplitudes
+    - firing_rates
+    - rheobase
+  coarse_f_I_stim:
+    - current_amplitudes
+    - firing_rates
+    - ISIs
+    - slope
+  E_I_pulse:
+    - EPSP_amplitude
+    - IPSP_amplitude
+    - EPSP_slope
+    - IPSP_slope
+  theta_burst:
+    - EPSP_amplitude
+    - IPSP_amplitude
+    - EPSP_slope
+    - IPSP_slope
+  
+#TODO: add default values for baseline_window_duration and ISI_correction
+  
+defaults:  
+  filtering:
+    stim_removal:
+      start: 0.5
+      end: 1.5
+    noise_removal:
+      start: 0
+      end: 0
+    detect_spikes:
+      threshold: 0
+    interpolated_spikes:
+      threshold: -10
+      spike_width: 0.5
+  analysis:
+    coarse_f_I_stim:
+      step_start: 350
+      step_duration: 500
+      current_amplitude_start: 0
+      current_amplitude_increment: 50
+      current_num_increments: 8
+    fine_f_I_stim:
+      step_start: 350
+      step_duration: 500
+      current_amplitude_start: 0
+      current_amplitude_increment: 10
+      current_num_increments: 11
+    voltage_sag:
+      step_start: 350
+      step_duration: 500
+      current_amplitude: -200
+    test_pulse:
+      step_start: 50
+      step_duration: 100
+      current_amplitude: -50
+    EPSP_test_pulses:
+      channel_1:
+        label: Perforant Path
+        stim_start: 500
+        num_pulses: 2
+        ISI: 50
+      channel_2:
+        label: Schaffer Collateral
+        stim_start: 800
+        num_pulses: 2
+        ISI: 50
+    E_I_pulse:
+      channel_1:
+        label: Perforant Path
+        condition:
+          - control
+          - Gabazine
+        stim_start: 500
+        baseline_window_duration: 10 # ms
+        ISI_correction: 0 # ms
+        ISI_list:
+          - 300
+          - 100
+          - 50
+          - 25
+          - 10
+        num_pulses: 3
+      channel_2:
+        condition:
+          - control
+          - Gabazine
+        label: Schaffer Collateral
+        stim_start: 1500
+        baseline_window_duration: 10 # ms
+        ISI_correction: 0 # ms
+        ISI_list:
+          - 300
+          - 100
+          - 50
+          - 25
+          - 10
+        num_pulses: 3
+    theta_burst:
+      channel_1:
+        label: Perforant Path
+        stim_start: 500
+        num_pulses: 5
+        ISI: 10
+      channel_2:
+        label: Schaffer Collateral
+        stim_start: 500
+        num_pulses: 5
+        ISI: 10
+    tetanus:
+      channel_1:
+        label: Perforant Path
+        stim_start: 500
+        num_pulses: 50
+        ISI: 10
+      channel_2:
+        label: Schaffer Collateral
+        stim_start: 500
+        num_pulses: 50
+        ISI: 10
