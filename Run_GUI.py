@@ -14,7 +14,7 @@ from processing_gui import *
 
 @click.command()
 @click.option('--config_file_path', type=click.Path(exists=True), required=True,
-              default='/Users/samgritz/Desktop/Rutgers/Milstein_Lab/Code/Rutgers-Neuroscience-PhD/Ephys_Analysis/Updated_Code/Intracellular_Analysis/Default_Metadata.yaml')
+              default='https://github.com/samuelgritz/Rutgers-Neuroscience-PhD-/blob/cfb7a8ab4d5aca6f96bb748290e090a20a75b4fa/Default_Metadata_new_stims_dev_080724.yaml')
 @click.option('--debug', is_flag=True)
 @click.option('--interactive', is_flag=True)
 def main(config_file_path, debug, interactive):
