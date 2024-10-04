@@ -31,7 +31,7 @@ The input resistance is determined by the size of the cell and the number of ope
 
 ### Plotting input resistance over time as measure of cell health:
 
-![Plotting Input resistance across time in a single cell](/Users/samgritz/Library/CloudStorage/GoogleDrive-gritz122@gmail.com/My Drive/Rutgers/Milstein_Lab_Data/GNB1_WT_Project/New_Analysis_Processed_Data/WT_data/Processed_data/WT_BTSP_processed_data/saved_data/Sucrose_data/07022024_c2_BTSP_inp_res.png)
+![Plotting Input resistance across time in a single cell](https://github.com/samuelgritz/Ephys-Processing-GUI/blob/main/07022024_c2_BTSP_inp_res.png))
   
   
 
