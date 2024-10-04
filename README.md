@@ -13,12 +13,27 @@ python Run_GUI.py --config_file_path /Users/samgritz/Desktop/Ephys-Processing-GU
 
 ## Example usage
 
-### Analyzing Action Potential Properties 
-GUI includes the ability to measure various properties of neuron action potentials (AP) including: **AP threshold**, **AP firing rate**, **AP inter-spike-interval**, **AP halfwidth**, **AP size**, **After-Hyperpolarization size**, **After-Hyperpolarization halfwidth**, and **Rheobase**. 
+Below contains analysis examples of a single cell. 
+
+### Analyzing Action Potential Properties and Intrinsic Properties
+GUI includes the ability to measure various properties of neuron action potentials (AP) and various intrinsic properties including: **AP threshold**, **AP firing rate**, **AP inter-spike-interval**, **AP halfwidth**, **AP size**, **After-Hyperpolarization size**, **Rheobase**, **input resistance**, **voltage sag**
 
 - **AP Threshold:** The voltage (mV) at which the action potential is triggered. Measured as the max value of the first derivative before the peak of the action potential.
 - **AP Firing Rate:** The firing rate or frequency is the number of action potentials per second. This is one of the key electrophysiological features of neurons.
-- **AP inter-spike-interval (ISI):** A measure of the time between subsequent action potentials. This is typically used to measure _frequency adaptation_, which is a ratio between early ISI (e.g. the time between the first two action potentials) and late ISI (e.g. the last two action potentials) in the same trace. 
+- **AP inter-spike-interval (ISI):** A measure of the time between subsequent action potentials. This is typically used to measure _spike frequency adaptation_, which is a ratio between early ISI (e.g. the time between the first two action potentials) and late ISI (e.g. the last two action potentials) in the same trace.
+- **AP halfwidth:** A measure of the full width (in ms) of the action potential at half height, which mainly depends density and type of potassium channels as well as the inactivation of sodium channels.
+- **AP Size:** The amplitude or spike height measure from the action potential threshold.
+- **After-Hyperpolarization Size:** After Hyperpolarization (AHP), or the trough of the voltage response, is measured as the voltage difference between the action potential threshold and the most negative voltage of the AHP. AHP regulated the intrinsic excitability of neurons, as increased AHP can slow the firing rate by increasing the _spike frequency adaptation_.
+-  **Rheobase:** The minimum current required to elicit an action potential, which is an indication of somatic excitibility.
+-  **Input Resistance:**: The **input resistance (Rin)** is the total resistance measured by the amplifier, which is the sum of the electrode resistance and, mainly, the **membrane resistance (Rm)**. Measured from a current injection of 50pA that is 100ms long (test pulse). Calculated as the change in voltage / change in current (R = V/I), where the change in voltage is end voltage - baseline voltage.
+The input resistance is determined by the size of the cell and the number of open ion channels.
+- **Voltage Sag** The initial negative voltage peak in response to a hyperpolarizing step is associated with the **hyperpolarization-activated current (Ih)**, an inward current mediated by HCN channels that start to open at approx. -60 mV. Calculated as (steady state voltage - trough of sag) / (baseline voltage - trough of sag).
+
+### Plotting input resistance over time as measure of cell health:
+
+![Plotting Input resistance across time in a single cell](/Users/samgritz/Library/CloudStorage/GoogleDrive-gritz122@gmail.com/My Drive/Rutgers/Milstein_Lab_Data/GNB1_WT_Project/New_Analysis_Processed_Data/WT_data/Processed_data/WT_BTSP_processed_data/saved_data/Sucrose_data/07022024_c2_BTSP_inp_res.png)
+  
+  
 
 
 
