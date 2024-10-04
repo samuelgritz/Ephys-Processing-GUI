@@ -14,9 +14,11 @@ python Run_GUI.py --config_file_path /Users/samgritz/Desktop/Ephys-Processing-GU
 ## Example usage
 
 ### Analyzing Action Potential Properties 
-GUI includes the ability to measure various properties of neuron action potentials (AP) including: **AP threshold**, **AP firing rate**, **AP inter-spike-interval**, **AP halfwidth**, **AP size**, **After-Hyperpolarization size**, **After-Hyperpolarization halfwidth** 
+GUI includes the ability to measure various properties of neuron action potentials (AP) including: **AP threshold**, **AP firing rate**, **AP inter-spike-interval**, **AP halfwidth**, **AP size**, **After-Hyperpolarization size**, **After-Hyperpolarization halfwidth**, and **Rheobase**. 
 
-- **AP Threshold:** the voltage (mV) at which the action potential is triggered. Measure as the Max value of the first derivative before the peak of the action potential.  
+- **AP Threshold:** The voltage (mV) at which the action potential is triggered. Measured as the max value of the first derivative before the peak of the action potential.
+- **AP Firing Rate:** The firing rate or frequency is the number of action potentials per second. This is one of the key electrophysiological features of neurons.
+- **AP inter-spike-interval (ISI):** A measure of the time between subsequent action potentials. This is typically used to measure _frequency adaptation_, which is a ratio between early ISI (e.g. the time between the first two action potentials) and late ISI (e.g. the last two action potentials) in the same trace. 
 
 
 
