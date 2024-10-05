@@ -31,7 +31,7 @@ The input resistance is determined by the size of the cell and the number of ope
 
 ### User Interface
 
-![Using the GUI for processing](
+![Using the GUI for processing](https://github.com/samuelgritz/Ephys-Processing-GUI/blob/32c9e5f577f55790a3f1e629e932e2e75185d693/User_Interface_GUI.png)
 
 ### Plotting input resistance over time as measure of cell health:
 
