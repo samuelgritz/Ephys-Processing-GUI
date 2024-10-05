@@ -29,9 +29,15 @@ GUI includes the ability to measure various properties of neuron action potentia
 The input resistance is determined by the size of the cell and the number of open ion channels.
 - **Voltage Sag** The initial negative voltage peak in response to a hyperpolarizing step is associated with the **hyperpolarization-activated current (Ih)**, an inward current mediated by HCN channels that start to open at approx. -60 mV. Calculated as (steady state voltage - trough of sag) / (baseline voltage - trough of sag).
 
+### User Interface
+
+![Using the GUI for processing](
+
 ### Plotting input resistance over time as measure of cell health:
 
 ![Plotting Input resistance across time in a single cell](https://github.com/samuelgritz/Ephys-Processing-GUI/blob/main/07022024_c2_BTSP_inp_res.png))
+
+### User Inte
   
   
 
