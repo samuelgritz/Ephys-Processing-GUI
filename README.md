@@ -39,7 +39,7 @@ The input resistance is determined by the size of the cell and the number of ope
 
 ### Analyzing Voltage Trace at Rheobase
 
-![Rheobase AP properties](
+![Rheobase AP properties](https://github.com/samuelgritz/Ephys-Processing-GUI/blob/aee9aadf616171c8a3a273c90028d0259f1a1ddf/Analyze_Rheobase.png)
   
 
 
