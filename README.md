@@ -37,8 +37,9 @@ The input resistance is determined by the size of the cell and the number of ope
 
 ![Plotting Input resistance across time in a single cell](https://github.com/samuelgritz/Ephys-Processing-GUI/blob/main/07022024_c2_BTSP_inp_res.png))
 
-### User Inte
-  
+### Analyzing Voltage Trace at Rheobase
+
+![Rheobase AP properties](
   
 
 
