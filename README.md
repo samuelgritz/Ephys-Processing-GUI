@@ -38,7 +38,7 @@ The user interface includes different frames for preprocessing and analyzing dat
 
 ### Plotting input resistance over time as measure of cell health:
 
-![Plotting Input resistance across time in a single cell](https://github.com/samuelgritz/Ephys-Processing-GUI/blob/main/07022024_c2_BTSP_inp_res.png))
+![Plotting Input resistance across time in a single cell](https://github.com/samuelgritz/Ephys-Processing-GUI/blob/main/07022024_c2_BTSP_inp_res.png)
 
 ### Analyzing Voltage Trace at Rheobase
 
