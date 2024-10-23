@@ -18,9 +18,7 @@ import scipy.signal as signal
 from scipy.signal import find_peaks
 
 #Updates
-#TODO: add a feature to automatically uncheck all of the analysis check boxes when moving from experiment to experiment (i.e from ISI to ISI..)
 
-#TODO create another dataframe for plotting purposes
 
 
 
@@ -387,9 +385,7 @@ def calculate_voltage_sag(experiment_type, voltage_trace, acquisition_frequency,
         pass
 
 # Function to remove stimulation artifacts
-#TODO: Find a window to look in and find where second derivative is has a negative peak and step forwad and back by the entries
 
-#TODO: If the stim times are not actually correct, also remove stims using the dev function
 def remove_artifacts_custom(data, artifact_times, acquisition_frequency, delete_start_stim, delete_end_stim):
     '''Remove stim artifacts with known stim times'''
     processed_data = np.copy(data)  # Make a copy of the data to avoid modifying the original
@@ -544,7 +540,6 @@ def find_peaks_in_window(voltage_trace, delete_start_time, window_size, acquisit
 
     return max_peak_value, max_peak_idx
 
-#TODO create data_class for loading the data and storing the data and manipulating the data can call outside of the GUI, the init takes in file path and the data_dict
 # Main class
 class GUI(object):
 
@@ -577,8 +572,10 @@ class GUI(object):
         #if the data_df does not have the 'analysis_dict' column, then add it
         if 'analysis_dict' not in self.data_df.columns:
             self.data_df['analysis_dict'] = [{} for _ in range(len(self.data_df))]
-            self.data_df['intermediate_traces'] = [{} for _ in range(len(self.data_df))]
-            self.data_df['current_trace_key'] = ['raw' for _ in range(len(self.data_df))]
+
+        self.data_df['intermediate_traces'] = [{} for _ in range(len(self.data_df))]
+        self.data_df['current_trace_key'] = ['raw' for _ in range(len(self.data_df))]
+
         
         #create experiment_type lists for conditionals
         self.EPSP_list = []
@@ -1354,7 +1351,8 @@ class GUI(object):
             self.file_path = filedialog.askopenfilename(filetypes=[("Pickle files", "*.pkl")])
             if self.file_path:
                 self.data_df = pd.read_pickle(self.file_path)
-        
+                self.fill_metadata()
+
             return self.data_df
         
         except Exception as e:
@@ -2028,8 +2026,6 @@ class GUI(object):
     
     def apply_analysis_steps(self):
         '''Check the toggle states and run the appropriate functions'''
-        # for trace_key in self.analysis_steps_list:
-            
 
         for trace_key in self.analysis_steps_list:
             if trace_key == 'raw':
