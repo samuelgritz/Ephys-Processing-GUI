@@ -44,6 +44,7 @@ The input resistance is determined by the size of the cell and the number of ope
 
 ### Analyzing Postsynaptic Potentials and Complex Dendritic Spikes
 GUI includes the ability to preprocess and clean voltage responses of **postsynaptic potentials** in several ways:
+
 **Preprocess:**
 - Remove stimulus artifacts: With known stimulus times provided by the user via YAML file or through an automated function. The User can select the start and end duration of the interpolation that removes the artifact from the trace. 
 - Remove noise: Gives the user the ability to remove noise manually from specific traces. Future iterations will include the ability to filter and preprocess using Lowpass, Highpass, 
