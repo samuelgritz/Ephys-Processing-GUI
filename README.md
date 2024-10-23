@@ -34,6 +34,8 @@ The input resistance is determined by the size of the cell and the number of ope
 
 ![Using the GUI for processing](https://github.com/samuelgritz/Ephys-Processing-GUI/blob/32c9e5f577f55790a3f1e629e932e2e75185d693/User_Interface_GUI.png)
 
+The user interface includes different frames for preprocessing and analyzing data as well as filling in metadata information if it does not already exist in the dataframe. 
+
 ### Plotting input resistance over time as measure of cell health:
 
 ![Plotting Input resistance across time in a single cell](https://github.com/samuelgritz/Ephys-Processing-GUI/blob/main/07022024_c2_BTSP_inp_res.png))
@@ -46,10 +48,10 @@ The input resistance is determined by the size of the cell and the number of ope
 GUI includes the ability to preprocess and clean voltage responses of **postsynaptic potentials** in several ways:
 
 **Preprocess:**
-- Remove stimulus artifacts: With known stimulus times provided by the user via YAML file or through an automated function. The User can select the start and end duration of the interpolation that removes the artifact from the trace. 
-- Remove noise: Gives the user the ability to remove noise manually from specific traces. Future iterations will include the ability to filter and preprocess using Lowpass, Highpass, 
+Remove stimulus artifacts: With known stimulus times provided by the user via YAML file or through an automated function, the user can select the start and end duration of the interpolation that removes the artifact from the trace. 
+- Remove noise: Gives the user the ability to remove noise manually from specific traces. The user chooses the time and duration of the artifact to be removed. Future iterations will include the ability to filter and preprocess using Lowpass, Highpass, 
 Bandpass, and Stopband or notch filters.
-- Interpolate Spikes: Function will clip action potentials if the goal is analyze underlying area of postsynaptic potentials without interference form somatic AP responses.
+- Interpolate Spikes: This function will clip action potentials if the goal is to analyze the underlying area of postsynaptic potentials without interference from somatic AP responses. The user defines the Action Potential spike width and duration of Action Potential, including afterhyperpolarization, to be interpolated over. 
   
 **Postprocess:**
   - Partition trace: If the voltage traces include recordings with several different channels (i.e different input pathways), then traces will be partitioned to only analyze within a window surrounding the postsynaptic event.
@@ -58,6 +60,14 @@ Bandpass, and Stopband or notch filters.
   - Analyze Plateau: A more specific application to analyze complicated voltage responses known as complex **dendritic spikes** or **Ca 2+ spikes**
 
 **Definitions:**
+- **Excitatory Postsynaptic Potentials (EPSPs):** Electrical potential differences between the intracellular and the extracellular space. Excitatory means that the membrane voltage gets depolarized or most positive due to current flowing through receptors on the **postsynaptic membrane**. These postsynaptic electrical responses give a readout of synaptic transmission and can increase or decrease over time as a result of synaptic plasticity mechanisms such as short-term plasticity, long-term potentiation, and long-term depression.
+
+- **Dendritic Spikes**: Dendritic spikes result from a supralinear increase in the membrane potential in the dendrites of neurons. These signals can be generated through sodium and calcium voltage-gated channels as well N-methyl-D-aspartate (NMDA) receptors. They play an important role in synaptic integration and neuronal computation as well synaptic plasticity.
+
+### Analyzing and processing EPSPs
+
+
+
   
 
 
