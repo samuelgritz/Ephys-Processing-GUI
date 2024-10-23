@@ -49,6 +49,7 @@ GUI includes the ability to preprocess and clean voltage responses of **postsyna
 - Remove noise: Gives the user the ability to remove noise manually from specific traces. Future iterations will include the ability to filter and preprocess using Lowpass, Highpass, 
 Bandpass, and Stopband or notch filters.
 - Interpolate Spikes: Function will clip action potentials if the goal is analyze underlying area of postsynaptic potentials without interference form somatic AP responses.
+  
 **Postprocess:**
   - Partition trace: If the voltage traces include recordings with several different channels (i.e different input pathways), then traces will be partitioned to only analyze within a window surrounding the postsynaptic event.
   - Offset trace: Baseline offsets the partitioned trace to analyze the voltage response properties
