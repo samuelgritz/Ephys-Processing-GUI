@@ -66,6 +66,10 @@ Bandpass, and Stopband or notch filters.
 
 ### Analyzing and processing EPSPs
 
+Users can choose to plot various stages of preprocessing and postprocessing steps. 
+
+![EPSP analysis] (https://github.com/samuelgritz/Ephys-Processing-GUI/blob/0e4fcd95b09e26f710b0161264aea20832be6265/Analyze_EPSP_trace.png)
+
 
 
   
