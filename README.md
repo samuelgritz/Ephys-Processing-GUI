@@ -72,7 +72,7 @@ Users can choose to plot various stages of preprocessing and postprocessing step
 
 ### Analyzing and processing Complex Dendritic Spikes 
 
-  
+![Dendritic Ca Plateau](https://github.com/samuelgritz/Ephys-Processing-GUI/blob/7b2dd6d780de756df03aa43958299d8416a6ada0/Analyzing_Dendritic_Spikes.png)
 
 
 
