@@ -31,14 +31,15 @@ The input resistance is determined by the size of the cell and the number of ope
 
 ### User Interface
 
-![Using the GUI for processing](
+![Using the GUI for processing](https://github.com/samuelgritz/Ephys-Processing-GUI/blob/32c9e5f577f55790a3f1e629e932e2e75185d693/User_Interface_GUI.png)
 
 ### Plotting input resistance over time as measure of cell health:
 
 ![Plotting Input resistance across time in a single cell](https://github.com/samuelgritz/Ephys-Processing-GUI/blob/main/07022024_c2_BTSP_inp_res.png))
 
-### User Inte
-  
+### Analyzing Voltage Trace at Rheobase
+
+![Rheobase AP properties](https://github.com/samuelgritz/Ephys-Processing-GUI/blob/aee9aadf616171c8a3a273c90028d0259f1a1ddf/Analyze_Rheobase.png)
   
 
 
