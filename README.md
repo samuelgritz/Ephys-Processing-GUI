@@ -18,6 +18,7 @@ Below contains analysis examples of a single cell.
 ### Analyzing Action Potential Properties and Intrinsic Properties
 GUI includes the ability to measure various properties of neuron action potentials (AP) and various intrinsic properties including: **AP threshold**, **AP firing rate**, **AP inter-spike-interval**, **AP halfwidth**, **AP size**, **After-Hyperpolarization size**, **Rheobase**, **input resistance**, **voltage sag**
 
+**Definitions:**
 - **AP Threshold:** The voltage (mV) at which the action potential is triggered. Measured as the max value of the first derivative before the peak of the action potential.
 - **AP Firing Rate:** The firing rate or frequency is the number of action potentials per second. This is one of the key electrophysiological features of neurons.
 - **AP inter-spike-interval (ISI):** A measure of the time between subsequent action potentials. This is typically used to measure _spike frequency adaptation_, which is a ratio between early ISI (e.g. the time between the first two action potentials) and late ISI (e.g. the last two action potentials) in the same trace.
@@ -40,6 +41,21 @@ The input resistance is determined by the size of the cell and the number of ope
 ### Analyzing Voltage Trace at Rheobase
 
 ![Rheobase AP properties](https://github.com/samuelgritz/Ephys-Processing-GUI/blob/aee9aadf616171c8a3a273c90028d0259f1a1ddf/Analyze_Rheobase.png)
+
+### Analyzing Postsynaptic Potentials and Complex Dendritic Spikes
+GUI includes the ability to preprocess and clean voltage responses of **postsynaptic potentials** in several ways:
+**Preprocess:**
+- Remove stimulus artifacts: With known stimulus times provided by the user via YAML file or through an automated function. The User can select the start and end duration of the interpolation that removes the artifact from the trace. 
+- Remove noise: Gives the user the ability to remove noise manually from specific traces. Future iterations will include the ability to filter and preprocess using Lowpass, Highpass, 
+Bandpass, and Stopband or notch filters.
+- Interpolate Spikes: Function will clip action potentials if the goal is analyze underlying area of postsynaptic potentials without interference form somatic AP responses.
+**Postprocess:**
+  - Partition trace: If the voltage traces include recordings with several different channels (i.e different input pathways), then traces will be partitioned to only analyze within a window surrounding the postsynaptic event.
+  - Offset trace: Baseline offsets the partitioned trace to analyze the voltage response properties
+  - Analyze EPSP peaks: Analyzes the amplitude of **Excitatory Postsynaptic Potentials (EPSPs)**.
+  - Analyze Plateau: A more specific application to analyze complicated voltage responses known as complex **dendritic spikes** or **Ca 2+ spikes**
+
+**Definitions:**
   
 
 
