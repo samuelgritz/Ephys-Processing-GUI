@@ -49,7 +49,7 @@ GUI includes the ability to preprocess and clean voltage responses of **postsyna
 
 **Preprocess:**
 
-Remove stimulus artifacts: With known stimulus times provided by the user via YAML file or through an automated function, the user can select the start and end duration of the interpolation that removes the artifact from the trace. 
+- Remove stimulus artifacts: With known stimulus times provided by the user via YAML file or through an automated function, the user can select the start and end duration of the interpolation that removes the artifact from the trace. 
 - Remove noise: Gives the user the ability to remove noise manually from specific traces. The user chooses the time and duration of the artifact to be removed. Future iterations will include the ability to filter and preprocess using Lowpass, Highpass, 
 Bandpass, and Stopband or notch filters.
 - Interpolate Spikes: This function will clip action potentials if the goal is to analyze the underlying area of postsynaptic potentials without interference from somatic AP responses. The user defines the Action Potential spike width and duration of Action Potential, including afterhyperpolarization, to be interpolated over. 
